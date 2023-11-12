@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 [CreateAssetMenu(fileName="InstrumentScriptableObject", menuName ="ScriptableObjects/Instruments")]
 public class InstrumentScriptableObject : ScriptableObject
@@ -25,4 +26,13 @@ public class InstrumentScriptableObject : ScriptableObject
     [SerializeField]
     int pierce;
     public int Pierce { get => pierce; private set => pierce = value; }
+
+    [SerializeField] 
+    
+    EventReference drumPlayedSound;
+
+    public EventReference DrumPlayedSound { get => drumPlayedSound; private set => drumPlayedSound = value; }
+
+
+
 }

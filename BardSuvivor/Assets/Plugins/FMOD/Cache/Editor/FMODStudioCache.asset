@@ -12,10 +12,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 859373362008643563}
+  - {fileID: 6793767806152164445}
+  - {fileID: 2588084334714711039}
+  EditorEvents:
+  - {fileID: 2201991341121770707}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 6793767806152164445}
+  StringsBanks:
+  - {fileID: 859373362008643563}
+  cacheTime: 638354147703226297
   cacheVersion: 131609
+--- !u!114 &859373362008643563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638354131569195635
+  FileSizes:
+  - Name: Desktop
+    Value: 816
+  Exists: 1
+--- !u!114 &2201991341121770707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DrumPlayed
+  m_EditorClassIdentifier: 
+  Path: event:/DrumPlayed
+  Guid:
+    Data1: -1859994878
+    Data2: 1225167475
+    Data3: 2138105013
+    Data4: 2109576313
+  Banks:
+  - {fileID: 2588084334714711039}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2588084334714711039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX_Intruments.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/SFX_Intruments.bank
+  Name: SFX_Intruments
+  StudioPath: bank:/SFX_Intruments
+  lastModified: 638354147703226297
+  FileSizes:
+  - Name: Desktop
+    Value: 45920
+  Exists: 1
+--- !u!114 &6793767806152164445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638354131569155593
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1

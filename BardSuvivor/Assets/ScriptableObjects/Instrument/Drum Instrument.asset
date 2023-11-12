@@ -17,3 +17,10 @@ MonoBehaviour:
   speed: 10
   bpmInterval: 2
   pierce: 1
+  drumPlayedSound:
+    Guid:
+      Data1: -1859994878
+      Data2: 1225167475
+      Data3: 2138105013
+      Data4: 2109576313
+    Path: event:/DrumPlayed
