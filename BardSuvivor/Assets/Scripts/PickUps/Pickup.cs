@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(StudioEventEmitter))]
 public class Pickup : MonoBehaviour, ICollectible
 {
     Transform player;
@@ -10,10 +12,14 @@ public class Pickup : MonoBehaviour, ICollectible
     bool attracted;
 
     float pullSpeed;
+
+    private StudioEventEmitter emitter;
     void Start()
     {
         pullSpeed = 5;
         player = FindObjectOfType<PlayerMovement>().transform;
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.pickupsIdle, this.gameObject);
+        emitter.Play();
     }
     private void Update()
     {
@@ -29,13 +35,14 @@ public class Pickup : MonoBehaviour, ICollectible
     {
         if (col.CompareTag("Player"))
         {
+            emitter.Stop();
             Destroy(gameObject);
         }
     }
 
     public virtual void Collect()
     {
-        attracted = true;
+        //attracted = true;
     }
 
     public virtual void Attract()

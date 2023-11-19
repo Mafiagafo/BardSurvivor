@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using FMODUnity;
 using UnityEngine;
 
 public class DrumController : InstrumentController
@@ -16,7 +15,7 @@ public class DrumController : InstrumentController
 
     protected override void PlayAttack(){
         base.PlayAttack();
-        AudioManager.instance.PlayOneShot(instrumentData.DrumPlayedSound, this.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.drumPlayed, this.transform.position);
         GameObject spawnedDrum = Instantiate(instrumentData.Prefab);
         spawnedDrum.transform.position = transform.position;
         spawnedDrum.GetComponent<DrumBehaviour>().DirectionChecker(playerMovement.lastMovedVector);

@@ -585,6 +585,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - SFX_General
   - SFX_Intruments
   BanksToLoad: []
   LiveUpdatePort: 9264

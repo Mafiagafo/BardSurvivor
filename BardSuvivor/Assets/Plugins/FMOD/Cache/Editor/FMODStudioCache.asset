@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8175760663841785889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PickUps/Bells
+  m_EditorClassIdentifier: 
+  Path: event:/PickUps/Bells
+  Guid:
+    Data1: -389756708
+    Data2: 1158298592
+    Data3: 346194079
+    Data4: -2037145715
+  Banks:
+  - {fileID: 1570981023395116448}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8500
+--- !u!114 &-2705233229227390355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Instruments/DrumPlayed
+  m_EditorClassIdentifier: 
+  Path: event:/Instruments/DrumPlayed
+  Guid:
+    Data1: 396125596
+    Data2: 1078415024
+    Data3: 231125648
+    Data4: -1308844756
+  Banks:
+  - {fileID: 2588084334714711039}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4002
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,14 +70,19 @@ MonoBehaviour:
   - {fileID: 859373362008643563}
   - {fileID: 6793767806152164445}
   - {fileID: 2588084334714711039}
+  - {fileID: 1570981023395116448}
+  - {fileID: 4884305273950251561}
   EditorEvents:
-  - {fileID: 2201991341121770707}
+  - {fileID: 4094887546990500352}
+  - {fileID: -8175760663841785889}
+  - {fileID: -2705233229227390355}
+  - {fileID: 6571847741307514998}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6793767806152164445}
   StringsBanks:
   - {fileID: 859373362008643563}
-  cacheTime: 638354147703226297
+  cacheTime: 638360181002246630
   cacheVersion: 131609
 --- !u!114 &859373362008643563
 MonoBehaviour:
@@ -40,12 +99,12 @@ MonoBehaviour:
   Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638354131569195635
+  lastModified: 638360180992535621
   FileSizes:
   - Name: Desktop
-    Value: 816
+    Value: 1116
   Exists: 1
---- !u!114 &2201991341121770707
+--- !u!114 &1570981023395116448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,24 +113,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/DrumPlayed
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX_General.bank
   m_EditorClassIdentifier: 
-  Path: event:/DrumPlayed
-  Guid:
-    Data1: -1859994878
-    Data2: 1225167475
-    Data3: 2138105013
-    Data4: 2109576313
-  Banks:
-  - {fileID: 2588084334714711039}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/SFX_General.bank
+  Name: SFX_General
+  StudioPath: bank:/SFX_General
+  lastModified: 638360145409054500
+  FileSizes:
+  - Name: Desktop
+    Value: 136512
+  Exists: 1
 --- !u!114 &2588084334714711039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,11 +139,85 @@ MonoBehaviour:
   Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/SFX_Intruments.bank
   Name: SFX_Intruments
   StudioPath: bank:/SFX_Intruments
-  lastModified: 638354147703226297
+  lastModified: 638360145409334747
   FileSizes:
   - Name: Desktop
-    Value: 45920
+    Value: 45824
   Exists: 1
+--- !u!114 &4094887546990500352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerFootseps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/PlayerFootseps
+  Guid:
+    Data1: 164599899
+    Data2: 1251034650
+    Data3: -1175494257
+    Data4: 205437
+  Banks:
+  - {fileID: 1570981023395116448}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
+--- !u!114 &4884305273950251561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Musics.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/Musics.bank
+  Name: Musics
+  StudioPath: bank:/Musics
+  lastModified: 638360181002246630
+  FileSizes:
+  - Name: Desktop
+    Value: 898624
+  Exists: 1
+--- !u!114 &6571847741307514998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Musics/MusicPlaceholder/MusicPlaceholder
+  m_EditorClassIdentifier: 
+  Path: event:/Musics/MusicPlaceholder/MusicPlaceholder
+  Guid:
+    Data1: 2043410761
+    Data2: 1170877375
+    Data3: 908694172
+    Data4: -2126155019
+  Banks:
+  - {fileID: 4884305273950251561}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 64100
 --- !u!114 &6793767806152164445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +233,7 @@ MonoBehaviour:
   Path: ../../../Desktop/DanceSurvivor/FMOD/BardSurvivor/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638354131569155593
+  lastModified: 638360180992505498
   FileSizes:
   - Name: Desktop
     Value: 1036

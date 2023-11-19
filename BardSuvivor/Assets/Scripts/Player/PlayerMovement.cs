@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,12 +18,16 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D characterBody;
     PlayerStats player;
 
+    //Audio
+    private EventInstance playerFootsteps;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<PlayerStats>();
         characterBody = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2 (1,0f);
+        playerFootsteps = AudioManager.instance.CreaterEventInstance(FMODEvents.instance.playerFootsteps);
     }
 
     // Update is called once per frame
@@ -34,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        UpdateSound();
     }
 
     void Move()
@@ -65,6 +71,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
         
+    }
+
+    private void UpdateSound()
+    {
+        if (characterBody.velocity.x !=0 || characterBody.velocity.y != 0)
+        {
+            PLAYBACK_STATE playbackState;
+            playerFootsteps.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                playerFootsteps.start();
+            }
+        }
+        else
+        {
+            playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
+        }
     }
 
 
