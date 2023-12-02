@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeMusic(FMODEvents.instance.musicPlay);
+        // InitializeMusic(FMODEvents.instance.musicPlay);
     }
         
     private void Awake()

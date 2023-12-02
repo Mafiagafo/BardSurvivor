@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &45571618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 45571619}
+  - component: {fileID: 45571620}
+  m_Layer: 0
+  m_Name: PlaySoundOnBeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &45571619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45571618}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 970105520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45571620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45571618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a450b1d18b71347a29be89aaf448d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 970105521}
+  fMODEvents: {fileID: 1999814952}
 --- !u!1 &100233243
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +460,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6392342, y: 0.92080754}
   m_EdgeRadius: 0
+--- !u!1 &300507701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300507702}
+  - component: {fileID: 300507703}
+  m_Layer: 0
+  m_Name: LoopBPM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &300507702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300507701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1814022556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300507703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300507701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46772db72f1eed3448a9a089e48760ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLoopBPM: 100
 --- !u!1 &396862738
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 45571619}
   - {fileID: 1999814951}
   m_Father: {fileID: 1814022556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -813,6 +905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 970105520}
+  - {fileID: 300507702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999814950
@@ -859,13 +952,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ada57763ac33ce4397dec674b1f78be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <musicPlay>k__BackingField:
+    Guid:
+      Data1: 2043410761
+      Data2: 1170877375
+      Data3: 908694172
+      Data4: -2126155019
+    Path: event:/Musics/MusicPlaceholder/MusicPlaceholder
   <drumPlayed>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 396125596
+      Data2: 1078415024
+      Data3: 231125648
+      Data4: -1308844756
+    Path: event:/Instruments/DrumPlayed
+  <drumPlayedAlternative>k__BackingField:
+    Guid:
+      Data1: -1345082538
+      Data2: 1151514062
+      Data3: 1539946678
+      Data4: -1393604802
+    Path: event:/Instruments/DrumPlayedAlternative
+  <playerFootsteps>k__BackingField:
+    Guid:
+      Data1: 164599899
+      Data2: 1251034650
+      Data3: -1175494257
+      Data4: 205437
+    Path: event:/Player/PlayerFootseps
+  <pickupsIdle>k__BackingField:
+    Guid:
+      Data1: -389756708
+      Data2: 1158298592
+      Data3: 346194079
+      Data4: -2037145715
+    Path: event:/PickUps/Bells
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
