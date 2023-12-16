@@ -9,6 +9,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference musicPlay { get; private set;}
 
     [field: Header("Instruments SFX")]
+    [field: SerializeField] public EventReference percussionBase { get; private set;}
     [field: SerializeField] public EventReference drumPlayed { get; private set;}
     [field: SerializeField] public EventReference drumPlayedAlternative { get; private set;}
 

@@ -16,10 +16,9 @@ public class PlaySoundOnBeat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LoopBPM.beatFull)  
+        if (LoopBPM.beatD4)  
         {
-            audioManager.PlayOneShot(FMODEvents.instance.drumPlayedAlternative, this.transform.position);
-
+            audioManager.PlayOneShot(FMODEvents.instance.percussionBase, this.transform.position);
         } 
     }
 }
