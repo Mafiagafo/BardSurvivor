@@ -7,6 +7,8 @@ public class InstrumentController : MonoBehaviour
     [Header("Instrument Stats")]
     public InstrumentScriptableObject instrumentData;
     public GameObject prefab;
+
+    public LoopBPM loopBPM;
     float currentBpm;
 
     protected PlayerMovement playerMovement;
@@ -31,5 +33,6 @@ public class InstrumentController : MonoBehaviour
     protected virtual void PlayAttack()
     {
         currentBpm = instrumentData.BpmInterval;
+        //currentBpm = (instrumentData.BpmInterval * (60 / loopBPM.gameLoopBPM))/4 ;
     }
 }

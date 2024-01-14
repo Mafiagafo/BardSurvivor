@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TapSpawn : MonoBehaviour
+public class TapSpawner : MonoBehaviour
 {
     [Header("Behaviour Settings")]
     public Transform currentUIBeat;
     [Range(0.5f, 4f)]
-    public float currentSize, minimunSize, defaultSize;
-    public float shrinkFactor;
-   
-    
+    public bool tapSpawned;
+
+    public GameObject tapSpawn;
+
+    public GameObject parentTapRadius;
 
     [Header("Beat Settings")]
     [Range (0,3)]
@@ -29,30 +30,32 @@ public class TapSpawn : MonoBehaviour
         {
             currentUIBeat = this.transform;
         }
-        currentSize = defaultSize;
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentSize > minimunSize)
-        {
-            currentSize *= shrinkFactor;
-        } else
-        {
-            currentSize = minimunSize;
-        }
-        CheckBeat();
-        currentUIBeat.localScale = new Vector3 (currentUIBeat.localScale.x , currentSize, currentUIBeat.localScale.z);
         
+        CheckBeat();
+        BeatSpawn();        
+    }
+
+    void BeatSpawn(){
+        if (beatCountFull == 3 && !tapSpawned){
+            tapSpawned = true;
+            Debug.Log("Spawn");
+            Instantiate(tapSpawn, parentTapRadius.transform);
+            
+        }
+        if (beatCountFull == 0 && tapSpawned){
+            tapSpawned = false;
+        }
         
     }
 
-    void Shrink()
-    {
-        currentSize = minimunSize;
-    }
+
 
     void CheckBeat()
     {
@@ -62,7 +65,6 @@ public class TapSpawn : MonoBehaviour
         {
             if (LoopBPM.beatD4 && beatCountFull == onFullBeat && LoopBPM.beatCountD4 % 4 == onBeatD4[i])
             {
-                Shrink();
             }
         }
 

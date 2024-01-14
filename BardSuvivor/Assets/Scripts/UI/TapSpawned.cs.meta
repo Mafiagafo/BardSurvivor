@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 698735366537fe143b282ba8271db88c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - currentUIBeat: {instanceID: 0}
+  - tapSpawn: {fileID: 2446575734537929798, guid: 5c07e4cd1489f8d478f388d76bdc97a6, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
