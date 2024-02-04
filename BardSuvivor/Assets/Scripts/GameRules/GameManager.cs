@@ -15,6 +15,14 @@ public class GameManager : MonoBehaviour
 
     public GameState previousState;
 
+    [Header("UI")]
+    public GameObject pauseScreen;
+
+    void Awake()
+    {
+        DisableScreens();        
+    }
+
     void Update()
     {
         switch(currentState)
@@ -47,6 +55,7 @@ public class GameManager : MonoBehaviour
             previousState = currentState;
             ChangeState(GameState.Paused);
             Time.timeScale =0f;
+            pauseScreen.SetActive(true);
             Debug.Log("Game is paused");
         }
         
@@ -57,6 +66,7 @@ public class GameManager : MonoBehaviour
         {
             ChangeState(previousState);
             Time.timeScale = 1f;
+            pauseScreen.SetActive(false);
             Debug.Log("Game is resumed");   
         }
     }
@@ -76,5 +86,9 @@ public class GameManager : MonoBehaviour
 
         }
 
+    }
+    void DisableScreens()
+    {
+        pauseScreen.SetActive(false);
     }
 }
