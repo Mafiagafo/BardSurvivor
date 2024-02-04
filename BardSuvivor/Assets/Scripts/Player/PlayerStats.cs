@@ -10,7 +10,6 @@ public class PlayerStats : MonoBehaviour
 
     //current stats
     public float currentHealth;
-    [HideInInspector]
     public float currentMaxHealth;
     [HideInInspector]
     public float currentHpRecovery;
